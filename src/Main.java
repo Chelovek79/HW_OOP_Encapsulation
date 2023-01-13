@@ -3,6 +3,8 @@ import transport.Car;
 public class Main {
 
     public static void main(String[] args) {
+        Car superCar = new Car ();
+        String superTires = superCar.changeTires(0);
 
         Car car [] = new Car[5];
         car [0] = new Car("", "Mark II", 1992, "седан", 5,3.0,
@@ -18,7 +20,10 @@ public class Main {
 
         for (int i = 0; i < car.length; i++) {
             System.out.println(car[i]);
-            System.out.println("\t " + car[i].changeTires(0) + "\n");
+            System.out.println("\t " + superTires + "\n");
         }
+
+        System.out.println(car[0].getBrand() + " " + car[0].getModel() + " ");
+        superCar.unlockStarted();
     }
 }
